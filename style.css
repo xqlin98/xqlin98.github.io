@@ -86,11 +86,13 @@ a.btn:hover {border-color: #234; color: #234; box-shadow: 0 2px 6px rgba(0,0,0,0
 /* Industry Experience */
 .experience-list {margin-top: 12px;}
 .experience-item {display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #e6eaef; border-radius: 12px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.04); margin-bottom: 12px;}
-.experience-logo {width: 44px; height: 44px; object-fit: contain; border-radius: 8px; background: #fff;}
+.experience-logo {width: 64px; height: 64px; object-fit: contain; border-radius: 8px; background: #fff;}
 .experience-meta {display: flex; flex-direction: column;}
 .experience-role {font-weight: 700; color: #123;}
 .experience-company {color: #345;}
 .experience-dates {color: #667; font-size: 0.95em;}
+.experience-location {color: #667; font-size: 0.95em;}
+.experience-description {margin-top: 6px; color: #234; line-height: 1.45em;}
 
 @media only screen and (max-width: 1150px) {
     .header-profile-picture, .header-text {display: block; margin: auto; text-align: center;}
