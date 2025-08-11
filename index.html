@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" href="files/nus-logo.jpeg">
     <link rel="icon" type="image/png" href="files/nus-logo.jpeg">
     <link rel="manifest" href="files/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -43,62 +44,138 @@
     </div>
     <div>
         <h2 class="noselect">Recent Updates</h2>
-        <p>
-            [4 Jul 2024] I gave a talk at CoPhi Group @ SJTU on data-efficient AI, slides are available <a href="files/Data attribution and optimization for data-efficient AI.pdf">here</a>.
-        </p>
-        <p>
-            [19 May 2025] I am honored to be listed as notable reviewer in ICLR 2025!
-        </p>        
-        <p>
-            [2 May 2025] Our 1 paper is accepted by ICML 2025!
-        </p>        
-        <p>
-            [10 Mar 2025] I am starting my internship as a research scientist at Meta, California, USA!
-        </p>
-        <p>
-            [23 Jan 2025] Our 2 papers are accepted by ICLR 2025!
-        </p>
-        <p>
-            [28 Nov 2024] I gave a talk at Max Planck Research School for Intelligent Systems (IMPRS-IS) and University of Stuttgart on prompt optimization, slides are available <a href="files/Prompt Optimization in the Wild - Challenges and Opportunities .pdf">here</a>.
-        </p>
-        <p>
-            [26 Sep 2024] Our 3 papers are accepted by NeurIPS 2024!
-        </p>
-        <p>
-            [20 Sep 2024] Our position paper is accepted by EMNLP Findings 2024!
-        </p>
-        <p>
-            [5 Aug 2024] I receive Research Achievement Award from NUS School of Computing.
-        </p>
-        <p>
-            [2 May 2024] Our 3 papers are accepted by ICML 2024!
-        </p>
+        <div class="updates">
+            <div class="update-item">
+                <span class="update-date">[4 Jul 2024]</span> I gave a talk at CoPhi Group @ SJTU on data-efficient AI, slides are available <a href="files/Data attribution and optimization for data-efficient AI.pdf">here</a>.
+            </div>
+            <div class="update-item">
+                <span class="update-date">[19 May 2025]</span> I am honored to be listed as notable reviewer in ICLR 2025! 🎉
+            </div>
+            <div class="update-item">
+                <span class="update-date">[2 May 2025]</span> Our 1 paper is accepted by ICML 2025! 🎉
+            </div>
+            <div class="update-item">
+                <span class="update-date">[10 Mar 2025]</span> I am starting my internship as a research scientist at Meta, California, USA! 🎉
+            </div>
+            <div class="update-item">
+                <span class="update-date">[23 Jan 2025]</span> Our 2 papers are accepted by ICLR 2025! 🎉
+            </div>
+            <div class="update-item">
+                <span class="update-date">[28 Nov 2024]</span> I gave a talk at Max Planck Research School for Intelligent Systems (IMPRS-IS) and University of Stuttgart on prompt optimization, slides are available <a href="files/Prompt Optimization in the Wild - Challenges and Opportunities .pdf">here</a>.
+            </div>
+            <div class="update-item">
+                <span class="update-date">[26 Sep 2024]</span> Our 3 papers are accepted by NeurIPS 2024! 🎉
+            </div>
+            <div class="update-item">
+                <span class="update-date">[20 Sep 2024]</span> Our position paper is accepted by EMNLP Findings 2024! 🎉
+            </div>
+            <div class="update-item">
+                <span class="update-date">[5 Aug 2024]</span> I receive Research Achievement Award from NUS School of Computing. 🏆
+            </div>
+            <div class="update-item">
+                <span class="update-date">[2 May 2024]</span> Our 3 papers are accepted by ICML 2024! 🎉
+            </div>
+        </div>
+        <style>
+            .updates {
+                margin-top: 16px;
+                max-height: 180px;
+                overflow-y: auto;
+                padding: 8px;
+                border: 1px solid #e6eaef;
+                border-radius: 12px;
+                background: #fff;
+                box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+                position: relative;
+                scroll-snap-type: y proximity;
+                -webkit-overflow-scrolling: touch;
+            }
+            .updates::after {
+                content: "";
+                position: sticky;
+                bottom: -1px;
+                display: block;
+                height: 24px;
+                margin-top: -24px;
+                background: linear-gradient(to bottom, rgba(255,255,255,0), #fff 80%);
+                pointer-events: none;
+            }
+            .update-item {
+                margin-bottom: 10px;
+                padding: 8px 10px;
+                border-radius: 8px;
+                background: #f8f9fa;
+                transition: background 0.2s ease, transform 0.2s ease;
+                scroll-snap-align: start;
+            }
+            .update-item:hover {
+                background: #f2f4f6;
+                transform: translateX(2px);
+            }
+            .update-date {
+                color: #2471a3;
+                font-weight: bold;
+                margin-right: 6px;
+            }
+            /* Scrollbar */
+            .updates::-webkit-scrollbar { width: 8px; }
+            .updates::-webkit-scrollbar-track { background: transparent; }
+            .updates::-webkit-scrollbar-thumb { background: #ccd6e0; border-radius: 8px; }
+            .updates:hover::-webkit-scrollbar-thumb { background: #aab7c6; }
+        </style>
     </div>
     <div>
         <h2 class="noselect">Research Interests</h2>
-        <p>
-            Data-centric AI for large models (e.g., data selection/curation in different stages of training for large models and use of data at inference).
-        </p>
-        <p>
-            Data valuation (e.g., data attribution, data debugging).
-        </p>
-        <p>
-            Zeroth-order optimization (e.g., Bayesian optimization and bandit algorithms).
-        </p>
-        <p>
-            Collaborative machine learning (e.g., federated learning, incentive mechanism).
-        </p>
+        I work on data-centric AI, with a focus on the following areas:
+        <div class="interests-grid">
+            <div class="interest-card">
+                <h3>Data Selection & Attribution</h3>
+                <ul>
+                    <li>Automatic data selection for LLM training</li>
+                    <li>Data attribution and valuation</li>
+                </ul>
+            </div>
+            <div class="interest-card">
+                <h3>Prompt Optimization</h3>
+                <ul>
+                    <li>Automatic prompt optimization for LLM inference</li>
+                    <li>In-context learning and few-shot prompting</li>
+                </ul>
+            </div>
+            <div class="interest-card">
+                <h3>Others</h3>
+                <ul>
+                    <li>Federated and collaborative machine learning</li>
+                    <li>Zero-shot optimization</li>
+                    <li>Preference-based optimization</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div>
-        <h2 class="noselect">Publications</h2>
+        <h2 class="noselect">Conference Publications</h2>
+        <div class="tabs" role="tablist" aria-label="Publications view">
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="pubs-by-year" id="tab-year">By Year</button>
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="pubs-by-topic" id="tab-topic">By Topic</button>
+        </div>
+        <div id="pubs-by-year" class="tab-pane" role="tabpanel" aria-labelledby="tab-year" hidden>
         <div class="publication row clearfix">
             <!-- <div class="row-media" style="background-image: url(files/icml2023.png);"></div> -->
             <div class="row-text">
                 <a class="publication-title bold" href="https://openreview.net/forum?id=etZDqN4mlF">NICE: Non-differentiable Evaluation Metric-based Data Selection for Instruction Tuning.</a><br/>
                 Jingtan Wang, <span class="bold">Xiaoqiang Lin</span>, Rui Qiao, Pang Wei Koh, Chuan-Sheng Foo, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">International Conference on Machine Learning (<a href="https://icml.cc/">ICML</a>)</span>, 2025.<br/>
+                <span class="italic">ICML</span>, 2025.<br/>
                 <a class="btn" href="https://openreview.net/forum?id=etZDqN4mlF">Paper</a>
+            </div>
+        </div>
+        <div class="publication row clearfix">
+            <!-- <div class="row-media" style="background-image: url(files/icml2023.png);"></div> -->
+            <div class="row-text">
+                <a class="publication-title bold" href="https://openreview.net/forum?id=1OJONb9MZM">ActiveDPO: Active Direct Preference Optimization for Sample-Efficient Alignment.</a><br/>
+                <span class="bold">Xiaoqiang Lin</span>, Arun Verma, Zhongxiang Dai, Daniela Rus, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
+                <span class="italic">ICML Workshop</span>, 2025.<br/>
+                <a class="btn" href="https://openreview.net/forum?id=1OJONb9MZM">Paper</a> / <a class="btn" href="https://github.com/xqlin98/activeDPO">Code</a>
             </div>
         </div>
         <div class="publication row clearfix">
@@ -107,7 +184,7 @@
                 <a class="publication-title bold" href="https://openreview.net/forum?id=lOfuvmi2HT">Efficient Top-m Data Values Identification for Data Selection.</a><br/>
                 <span class="bold">Xiaoqiang Lin</span>, Xinyi Xu, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">International Conference on Learning Representations (<a href="https://iclr.cc/">ICLR</a>)</span>, 2025.<br/>
+                <span class="italic">ICLR</span>, 2025.<br/>
                 <a class="btn" href="https://openreview.net/forum?id=lOfuvmi2HT">Paper</a>
             </div>
         </div>
@@ -117,7 +194,7 @@
                 <a class="publication-title bold" href="https://openreview.net/forum?id=VELhv9BBfn">Neural Dueling Bandits: Principled Preference-Based Optimization with Non-Linear Reward Function.</a><br/>
                 Arun Verma, Zhongxiang Dai, <span class="bold">Xiaoqiang Lin</span>, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">International Conference on Learning Representations (<a href="https://iclr.cc/">ICLR</a>)</span>, 2025.<br/>
+                <span class="italic">ICLR</span>, 2025.<br/>
                 <a class="btn" href="https://openreview.net/forum?id=VELhv9BBfn">Paper</a>
             </div>
         </div>
@@ -127,7 +204,7 @@
                 <a class="publication-title bold" href="https://arxiv.org/abs/2405.16122">Prompt Optimization with EASE? Efficient Ordering-aware Automated Selection of Exemplars.</a><br/>
                 Zhaoxuan Wu*, <span class="bold">Xiaoqiang Lin*</span>, Zhongxiang Dai, Wenyang Hu, Yao Shu, See-Kiong Ng, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">Neural Information Processing Systems (<a href="https://neurips.cc/">NeurIPS</a>)</span>, 2024.<br/>
+                <span class="italic">NeurIPS</span>, 2024.<br/>
                 <!-- <span class="italic">Also presented at <a href="https://iclworkshop.github.io/">ICML 2024, Workshop on In-Context Learning</a><br/> -->
                 <a class="btn" href="https://arxiv.org/abs/2405.16122">Paper</a> / <a class="btn" href="https://github.com/ZhaoxuanWu/EASE-Prompt-Optimization">Code</a>
             </div>
@@ -138,7 +215,7 @@
                 <a class="publication-title bold" href="https://arxiv.org/abs/2405.14899">DETAIL: Task DEmonsTration Attribution for Interpretable In-context Learning.</a><br/>
                 Zijian Zhou, <span class="bold">Xiaoqiang Lin</span>, Xinyi Xu, Alok Prakash, Daniela Rus, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">Neural Information Processing Systems (<a href="https://neurips.cc/">NeurIPS</a>)</span>, 2024.<br/>
+                <span class="italic">NeurIPS</span>, 2024.<br/>
                 <!-- <span class="italic">Also presented at <a href="https://iclworkshop.github.io/">ICML 2024, Workshop on In-Context Learning</a><br/> -->
                 <a class="btn" href="https://arxiv.org/abs/2405.14899">Paper</a> / <a class="btn" href="https://github.com/BobbyZhouZijian/detail_release">Code</a>
             </div>
@@ -149,7 +226,7 @@
                 <a class="publication-title bold" href="https://arxiv.org/abs/2403.02993">Localized Zeroth-Order Prompt Optimization.</a><br/>
                 Wenyang Hu, Yao Shu, Zongmin Yu, Zhaoxuan Wu, <span class="bold">Xiangqiang Lin</span>, Zhongxiang Dai, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">Neural Information Processing Systems (<a href="https://neurips.cc/">NeurIPS</a>)</span>, 2024.<br/>
+                <span class="italic">NeurIPS</span>, 2024.<br/>
                 <!-- <span class="italic">Also presented at <a href="https://iclworkshop.github.io/">ICML 2024, Workshop on In-Context Learning</a><br/> -->
                 <a class="btn" href="https://arxiv.org/abs/2403.02993">Paper</a>
             </div>
@@ -161,7 +238,7 @@
                 <a class="publication-title bold" href="https://arxiv.org/abs/2406.14473v1">Position Paper: Data-Centric AI in the Age of Large Language Models.</a><br/>
                 Xinyi Xu, Zhaoxuan Wu, Rui Qiao, Arun Verma, Yao Shu, Jingtan Wang, Xinyuan Niu, Zhenfeng He, Jiangwei Chen, Zijian Zhou, Gregory Kang Ruey Lau, Hieu Dao, Lucas Agussurja, Rachael Hwee Ling Sim, <span class="bold">Xiaoqiang Lin</span>, Wenyang Hu, Zhongxiang Dai, Pang Wei Koh, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">Empirical Methods in Natural Language Processing Findings (<a href="https://2024.emnlp.org/">EMNLP Findings</a>)</span>, 2024.<br/>
+                <span class="italic">EMNLP Findings</span>, 2024.<br/>
                 <a class="btn" href="https://arxiv.org/abs/2406.14473v1">Paper</a>
             </div>
         </div>
@@ -171,7 +248,7 @@
                 <a class="publication-title bold" href="https://openreview.net/forum?id=mbBehLOAqR">Distributionally Robust Data Valuation.</a><br/>
                 <span class="bold">Xiaoqiang Lin</span>, Xinyi Xu, Zhaoxuan Wu, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2024">ICML</a>)</span>, 2024.<br/>
+                <span class="italic">ICML</span>, 2024.<br/>
                 <a class="btn" href="https://openreview.net/forum?id=mbBehLOAqR">Paper</a>
             </div>
         </div>
@@ -181,7 +258,7 @@
                 <a class="publication-title bold" href="https://openreview.net/forum?id=RLENZ8pNnn">Use Your INSTINCT: INSTruction optimization for LLMs usIng Neural bandits Coupled with Transformers.</a><br/>
                 <span class="bold">Xiaoqiang Lin*</span>, Zhaoxuan Wu*, Zhongxiang Dai, Wenyang Hu, Yao Shu, See-Kiong Ng, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2024">ICML</a>)</span>, 2024.<br/>
+                <span class="italic">ICML</span>, 2024.<br/>
                 <!-- <span class="italic">Also presented at <a href="https://an-instructive-workshop.github.io/">NeurIPS 2023, Workshop on Instruction Tuning and Instruction Following</a><br/> -->
                 <a class="btn" href="https://xqlin98.github.io/INSTINCT/">Project Page</a> / <a class="btn" href="https://openreview.net/forum?id=RLENZ8pNnn">Paper</a> / <a class="btn" href="https://github.com/xqlin98/INSTINCT">Code</a> / <a class="btn" href="bibtex/instinct.txt">Bibtex</a> 
             </div>
@@ -192,7 +269,7 @@
                 <a class="publication-title bold" href="https://openreview.net/forum?id=WSpPC1Jm0p">Helpful or Harmful Data? Fine-tuning-free Shapley Attribution for Explaining Language Model Predictions.</a><br/>
                 Jingtan Wang*, <span class="bold">Xiaoqiang Lin*</span>, Rui Qiao*, Chuan-Sheng Foo, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
-                <span class="italic">International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2024">ICML</a>)</span>, 2024.<br/>
+                <span class="italic">ICML</span>, 2024.<br/>
                 <a class="btn" href="https://openreview.net/forum?id=WSpPC1Jm0p">Paper</a> / <a class="btn" href="https://github.com/JTWang2000/FreeShap">Code</a>
             </div>
         </div>
@@ -201,7 +278,7 @@
             <div class="row-text">
                 <a class="publication-title bold" href="https://proceedings.mlr.press/v202/lin23l/lin23l.pdf">Fair yet Asymptotically Equal Collaborative Learning.</a><br/>
                 <span class="bold">Xiaoqiang Lin*</span>, Xinyi Xu*,  See-Kiong Ng, Chuan-Sheng Foo, Bryan Kian Hsiang Low.<br/>
-                <span class="italic">International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2023">ICML</a>)</span>, 2023.<br/>
+                <span class="italic">ICML</span>, 2023.<br/>
                 <a class="btn" href="https://proceedings.mlr.press/v202/lin23l/lin23l.pdf">Paper</a> / <a class="btn" href="https://github.com/xqlin98/Fair-yet-Equal-CML">Code</a> / <a class="btn" href="bibtex/icml2023.txt">Bibtex</a> 
             </div>
         </div>
@@ -210,10 +287,166 @@
             <div class="row-text">
                 <a class="publication-title bold" href="https://www.ijcai.org/proceedings/2020/0198.pdf">Joint Representation Learning of Legislator and Legislation for Roll Call Prediction.</a><br/>
                 Yuqiao Yang*, <span class="bold">Xiaoqiang Lin*</span>, Geng Lin, Zengfeng Huang, Changjian Jiang, Zhongyu Wei.<br/>
-                <span class="italic">International Joint Conferences on Artificial Intelligence (<a href="https://www.ijcai.org/">IJCAI</a>)</span>, 2020.<br/>
+                <span class="italic">IJCAI</span>, 2020.<br/>
                 <a class="btn" href="https://www.ijcai.org/proceedings/2020/0198.pdf">Paper</a> / <a class="btn" href="https://github.com/xqlin98/Joint-Representation-Learning-of-Legislator-and-Legislation-for-Roll-Call-Prediction">Code</a> / <a class="btn" href="bibtex/ijcai2020.txt">Bibtex</a> 
             </div>
         </div>
+        </div>
+        <div id="pubs-by-topic" class="tab-pane" role="tabpanel" aria-labelledby="tab-topic">
+            <div class="topic-section">
+                <h3 class="noselect">Data Selection & Attribution</h3>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=etZDqN4mlF">NICE: Non-differentiable Evaluation Metric-based Data Selection for Instruction Tuning.</a><br/>
+                        Jingtan Wang, <span class="bold">Xiaoqiang Lin</span>, Rui Qiao, Pang Wei Koh, Chuan-Sheng Foo, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICML</span>, 2025.<br/>
+                        <a class="btn" href="https://openreview.net/forum?id=etZDqN4mlF">Paper</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=1OJONb9MZM">ActiveDPO: Active Direct Preference Optimization for Sample-Efficient Alignment.</a><br/>
+                        <span class="bold">Xiaoqiang Lin</span>, Arun Verma, Zhongxiang Dai, Daniela Rus, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICML Workshop</span>, 2025.<br/>
+                        <a class="btn" href="https://openreview.net/forum?id=1OJONb9MZM">Paper</a> / <a class="btn" href="https://github.com/xqlin98/activeDPO">Code</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=lOfuvmi2HT">Efficient Top-m Data Values Identification for Data Selection.</a><br/>
+                        <span class="bold">Xiaoqiang Lin</span>, Xinyi Xu, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICLR</span>, 2025.<br/>
+                        <a class="btn" href="https://openreview.net/forum?id=lOfuvmi2HT">Paper</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=mbBehLOAqR">Distributionally Robust Data Valuation.</a><br/>
+                        <span class="bold">Xiaoqiang Lin</span>, Xinyi Xu, Zhaoxuan Wu, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICML</span>, 2024.<br/>
+                        <a class="btn" href="https://openreview.net/forum?id=mbBehLOAqR">Paper</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=WSpPC1Jm0p">Helpful or Harmful Data? Fine-tuning-free Shapley Attribution for Explaining Language Model Predictions.</a><br/>
+                        Jingtan Wang*, <span class="bold">Xiaoqiang Lin*</span>, Rui Qiao*, Chuan-Sheng Foo, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICML</span>, 2024.<br/>
+                        <a class="btn" href="https://openreview.net/forum?id=WSpPC1Jm0p">Paper</a> / <a class="btn" href="https://github.com/JTWang2000/FreeShap">Code</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://arxiv.org/abs/2405.14899">DETAIL: Task DEmonsTration Attribution for Interpretable In-context Learning.</a><br/>
+                        Zijian Zhou, <span class="bold">Xiaoqiang Lin</span>, Xinyi Xu, Alok Prakash, Daniela Rus, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">NeurIPS</span>, 2024.<br/>
+                        <a class="btn" href="https://arxiv.org/abs/2405.14899">Paper</a> / <a class="btn" href="https://github.com/BobbyZhouZijian/detail_release">Code</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://arxiv.org/abs/2406.14473v1">Position Paper: Data-Centric AI in the Age of Large Language Models.</a><br/>
+                        Xinyi Xu, Zhaoxuan Wu, Rui Qiao, Arun Verma, Yao Shu, Jingtan Wang, Xinyuan Niu, Zhenfeng He, Jiangwei Chen, Zijian Zhou, Gregory Kang Ruey Lau, Hieu Dao, Lucas Agussurja, Rachael Hwee Ling Sim, <span class="bold">Xiaoqiang Lin</span>, Wenyang Hu, Zhongxiang Dai, Pang Wei Koh, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">EMNLP Findings</span>, 2024.<br/>
+                        <a class="btn" href="https://arxiv.org/abs/2406.14473v1">Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-section">
+                <h3 class="noselect">Prompt Optimization</h3>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://arxiv.org/abs/2405.16122">Prompt Optimization with EASE? Efficient Ordering-aware Automated Selection of Exemplars.</a><br/>
+                        Zhaoxuan Wu*, <span class="bold">Xiaoqiang Lin*</span>, Zhongxiang Dai, Wenyang Hu, Yao Shu, See-Kiong Ng, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">NeurIPS</span>, 2024.<br/>
+                        <a class="btn" href="https://arxiv.org/abs/2405.16122">Paper</a> / <a class="btn" href="https://github.com/ZhaoxuanWu/EASE-Prompt-Optimization">Code</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://arxiv.org/abs/2403.02993">Localized Zeroth-Order Prompt Optimization.</a><br/>
+                        Wenyang Hu, Yao Shu, Zongmin Yu, Zhaoxuan Wu, <span class="bold">Xiangqiang Lin</span>, Zhongxiang Dai, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">NeurIPS</span>, 2024.<br/>
+                        <a class="btn" href="https://arxiv.org/abs/2403.02993">Paper</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=344O51eTPN">Prompt Optimization with Human Feedback.</a><br/>
+                        <span class="bold">Xiaoqiang Lin</span>, Zhongxiang Dai, Arun Verma, See-Kiong Ng, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICML Workshop</span>, 2024.<br/>
+                        <a class="btn" href="https://openreview.net/forum?id=344O51eTPN">Paper</a> / <a class="btn" href="https://github.com/xqlin98/APOHF">Code</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=RLENZ8pNnn">Use Your INSTINCT: INSTruction optimization for LLMs usIng Neural bandits Coupled with Transformers.</a><br/>
+                        <span class="bold">Xiaoqiang Lin*</span>, Zhaoxuan Wu*, Zhongxiang Dai, Wenyang Hu, Yao Shu, See-Kiong Ng, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICML</span>, 2024.<br/>
+                        <a class="btn" href="https://xqlin98.github.io/INSTINCT/">Project Page</a> / <a class="btn" href="https://openreview.net/forum?id=RLENZ8pNnn">Paper</a> / <a class="btn" href="https://github.com/xqlin98/INSTINCT">Code</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="topic-section">
+                <h3 class="noselect">Others</h3>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://proceedings.mlr.press/v202/lin23l/lin23l.pdf">Fair yet Asymptotically Equal Collaborative Learning.</a><br/>
+                        <span class="bold">Xiaoqiang Lin*</span>, Xinyi Xu*,  See-Kiong Ng, Chuan-Sheng Foo, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICML</span>, 2023.<br/>
+                        <a class="btn" href="https://proceedings.mlr.press/v202/lin23l/lin23l.pdf">Paper</a> / <a class="btn" href="https://github.com/xqlin98/Fair-yet-Equal-CML">Code</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://openreview.net/forum?id=VELhv9BBfn">Neural Dueling Bandits: Principled Preference-Based Optimization with Non-Linear Reward Function.</a><br/>
+                        Arun Verma, Zhongxiang Dai, <span class="bold">Xiaoqiang Lin</span>, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
+                        <span class="italic">ICLR</span>, 2025.<br/>
+                        <a class="btn" href="https://openreview.net/forum?id=VELhv9BBfn">Paper</a>
+                    </div>
+                </div>
+                <div class="publication row clearfix">
+                    <div class="row-text">
+                        <a class="publication-title bold" href="https://www.ijcai.org/proceedings/2020/0198.pdf">Joint Representation Learning of Legislator and Legislation for Roll Call Prediction.</a><br/>
+                        Yuqiao Yang*, <span class="bold">Xiaoqiang Lin*</span>, Geng Lin, Zengfeng Huang, Changjian Jiang, Zhongyu Wei.<br/>
+                        <span class="italic">IJCAI</span>, 2020.<br/>
+                        <a class="btn" href="https://www.ijcai.org/proceedings/2020/0198.pdf">Paper</a> / <a class="btn" href="https://github.com/xqlin98/Joint-Representation-Learning-of-Legislator-and-Legislation-for-Roll-Call-Prediction">Code</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabYear = document.getElementById('tab-year');
+            const tabTopic = document.getElementById('tab-topic');
+            const paneYear = document.getElementById('pubs-by-year');
+            const paneTopic = document.getElementById('pubs-by-topic');
+
+            function activate(tab) {
+                const isYear = tab === 'year';
+                tabYear.classList.toggle('active', isYear);
+                tabTopic.classList.toggle('active', !isYear);
+                tabYear.setAttribute('aria-selected', String(isYear));
+                tabTopic.setAttribute('aria-selected', String(!isYear));
+                if (isYear) {
+                    paneYear.removeAttribute('hidden');
+                    paneTopic.setAttribute('hidden', 'hidden');
+                } else {
+                    paneTopic.removeAttribute('hidden');
+                    paneYear.setAttribute('hidden', 'hidden');
+                }
+            }
+
+            tabYear.addEventListener('click', () => activate('year'));
+            tabTopic.addEventListener('click', () => activate('topic'));
+        });
+        </script>
+
         (* denotes equal contribution)
     </div>
     <div>
@@ -251,29 +484,6 @@
         <div class="publication row clearfix">
             <!-- <div class="row-media" style="background-image: url(files/icml2023.png);"></div> -->
             <div class="row-text">
-                <a class="publication-title bold" href="https://openreview.net/forum?id=1OJONb9MZM">ActiveDPO: Active Direct Preference Optimization for Sample-Efficient Alignment.</a><br/>
-                <span class="bold">Xiaoqiang Lin</span>, Arun Verma, Zhongxiang Dai, Daniela Rus, See-Kiong Ng, Bryan Kian Hsiang Low.<br/>
-                <!-- <span class="italic">arxiv</span><br/> -->
-                ICML 2025, Workshop on Models of Human Feedback for AI Alignment.<br/>
-                <a class="btn" href="https://openreview.net/forum?id=1OJONb9MZM">Paper</a> / <a class="btn" href="https://github.com/xqlin98/activeDPO">Code</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <!-- <div class="row-media" style="background-image: url(files/icml2023.png);"></div> -->
-            <div class="row-text">
-                <a class="publication-title bold" href="https://openreview.net/forum?id=344O51eTPN">Prompt Optimization with Human Feedback.</a><br/>
-                <span class="bold">Xiaoqiang Lin</span>, Zhongxiang Dai, Arun Verma, See-Kiong Ng, Patrick Jaillet, Bryan Kian Hsiang Low.<br/>
-                <!-- <span class="italic">arxiv</span><br/> -->
-                ICML 2024, Workshop on Models of Human Feedback for AI Alignment.
-                <br>
-                <a style="color:#DC143C">Selected as Oral</a>
-                <br>
-                <a class="btn" href="https://www.bilibili.com/video/BV13daQeuEgb">Oral presentation video</a> / <a class="btn" href="https://openreview.net/forum?id=344O51eTPN">Paper</a> / <a class="btn" href="https://github.com/xqlin98/APOHF">Code</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <!-- <div class="row-media" style="background-image: url(files/icml2023.png);"></div> -->
-            <div class="row-text">
                 <a class="publication-title bold" href="https://arxiv.org/abs/2308.04077">Federated Zeroth-Order Optimization using Trajectory-Informed Surrogate Gradients.</a><br/>
                 Yao Shu, <span class="bold">Xiaoqiang Lin</span>, Zhongxiang Dai, Bryan Kian Hsiang Low.<br/>
                 <!-- <span class="italic">arxiv</span><br/> -->
@@ -287,9 +497,9 @@
         <div class="publication row clearfix">
             <!-- <div class="row-media" style="background-image: url(files/icml2023.png);"></div> -->
             <div class="row-text">
-                <a class="publication-title bold" href="https://www.bilibili.com/video/BV14C4y1n7Ji">Use Your INSTINCT: INSTruction optimization usIng Neural bandits Coupled with Transformers.</a><br/>
-                @ <a class="publication-title bold" href="https://dlo-seminar.github.io/">Deep Learning and Optimization Seminar</a> (Jointly organized by Westlake University, City University of Hong Kong, Peking University). 24 Oct, 2023.
-                <a class="btn" href="https://www.bilibili.com/video/BV14C4y1n7Ji">Video</a>
+                <a class="publication-title bold" href="files/Data attribution and optimization for data-efficient AI.pdf">Data Attribution and Optimization for Data-Efficient AI.</a><br/>
+                @ CoPhi Group at Shanghai Jiao Tong University. 4 Jul, 2025.
+                <a class="btn" href="files/Data attribution and optimization for data-efficient AI.pdf">Slides</a>
             </div>
         </div>
         <div class="publication row clearfix">
@@ -303,9 +513,9 @@
         <div class="publication row clearfix">
             <!-- <div class="row-media" style="background-image: url(files/icml2023.png);"></div> -->
             <div class="row-text">
-                <a class="publication-title bold" href="files/Data attribution and optimization for data-efficient AI.pdf">Data Attribution and Optimization for Data-Efficient AI.</a><br/>
-                @ CoPhi Group at Shanghai Jiao Tong University. 4 Jul, 2025.
-                <a class="btn" href="files/Data attribution and optimization for data-efficient AI.pdf">Slides</a>
+                <a class="publication-title bold" href="https://www.bilibili.com/video/BV14C4y1n7Ji">Use Your INSTINCT: INSTruction optimization usIng Neural bandits Coupled with Transformers.</a><br/>
+                @ <a class="publication-title bold" href="https://dlo-seminar.github.io/">Deep Learning and Optimization Seminar</a> (Jointly organized by Westlake University, City University of Hong Kong, Peking University). 24 Oct, 2023.
+                <a class="btn" href="https://www.bilibili.com/video/BV14C4y1n7Ji">Video</a>
             </div>
         </div>
     </div>
@@ -313,9 +523,30 @@
         <a id="award"></a>
         <h2>Awards and Honors</h2>
         Award of Teaching Fellowship, National University of Singapore, 2023 (1 of 3 selected CS Ph.D. students).<br/>
-        Research Achievement Award × 2, NUS, School of Computing, 2023 & 2024.<br/>
+        Research Achievement Award × 3, NUS, School of Computing, 2023 & 2024 & 2025.<br/>
         Outstanding Graduates, Fudan University, 2020.<br/>
         Excellent Student Scholarship, Fudan University, 2017, 2018, 2019.<br/>
+    </div>
+    <div>
+        <h2 class="noselect">Industry Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <img class="experience-logo" src="files/meta-logo.png" alt="Meta logo" onerror="this.onerror=null;this.src='files/nus-logo.jpeg';"/>
+                <div class="experience-meta">
+                    <div class="experience-role">Research Scientist Intern</div>
+                    <div class="experience-company">Meta</div>
+                    <div class="experience-dates">Mar 2025 – Aug 2025</div>
+                </div>
+            </div>
+            <div class="experience-item">
+                <img class="experience-logo" src="files/ant-logo.png" alt="Ant Group logo" onerror="this.onerror=null;this.src='files/nus-logo.jpeg';"/>
+                <div class="experience-meta">
+                    <div class="experience-role">Machine Learning Engineer</div>
+                    <div class="experience-company">Ant Group</div>
+                    <div class="experience-dates">2020 – 2021</div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="noselect">
         <a id="services"></a>
@@ -336,26 +567,11 @@
     </div>
     <div><br><br>
     </div>
-    <!-- Default Statcounter code for My homepage https://xqlin98.github.io/ -->
-    <div class="noselect">
-        <script type="text/javascript">
-            var sc_project=12722733; 
-            var sc_invisible=0; 
-            var sc_security="fba3badc"; 
-            var scJsHost = "https://";
-            document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-            "statcounter.com/counter/counter.js'></"+"script>");
-        </script>
-        <noscript><div class="statcounter"><a title="Web Analytics"
-        href="https://statcounter.com/" target="_blank"><img class="statcounter"
-        src="https://c.statcounter.com/12722733/0/fba3badc/0/" alt="Web Analytics"
-        referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-        <!-- End of Statcounter Code -->
+    <div class="noselect flag-counter">
+        <a href="https://info.flagcounter.com/SdXg"><img src="https://s11.flagcounter.com/count2/SdXg/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
     </div>
 </div>
-<div hidden="hidden">
-<a href="https://info.flagcounter.com/SdXg"><img src="https://s11.flagcounter.com/count2/SdXg/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-</div>
+
 <div class="footer noselect">
     <div class="footer-content">
         &copy; This website is a fork from  <a style="color: white; text-decoration: underline;" href="https://github.com/nicklashansen/nicklashansen.github.io">here</a>.

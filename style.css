@@ -1,5 +1,5 @@
 html {-webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
-body {background-color: #fdfdfd; color: #234; margin: 0; font-size: 13px;}
+body {background-color: #fdfdfd; color: #234; margin: 0; font-size: 16px;}
 h1 {margin-bottom: 32px; font-size: 2.6em;}
 h2 {margin-top: 48px;}
 h1, h2 {color: #234;}
@@ -10,6 +10,9 @@ h1, h2, h3, h4, h5, a, p, span, body, div {font-weight: normal; font-family: 'La
 .header-name h1 {margin: 0;}
 .header-subtitle {margin-bottom: 12px;}
 .header-profile-picture {width: 300px; height: 300px; margin-right: 12px; border-radius: 50%; background-image: url(files/me.jpg); background-position: center; background-size: contain;}
+.header .content {display: flex; flex-direction: column; align-items: center; text-align: center;}
+.header .header-profile-picture {margin-right: 0; margin-bottom: 12px;}
+.header .header-text {text-align: center;}
 .content {max-width: 748px; padding-left: 16px; padding-right: 16px; margin: auto; margin-top: 48px;}
 .hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
 a {color: #2471a3; text-decoration: none;}
@@ -33,6 +36,61 @@ p {line-height: 1.5em;}
 .footer-content a {color: #fff; text-decoration: underline;}
 .footer-content a:hover {color: #f09228 !important;}
 .stars {font-size: 10px; display: inline-block; margin-left: 6px; color: #666;}
+/* Counter */
+.flag-counter {margin: 24px 0; text-align: center;}
+
+/* Tabs */
+.tabs {display: inline-flex; gap: 8px; background: #f2f4f8; padding: 6px; border-radius: 10px; margin: 12px 0 20px;}
+.tab-btn {appearance: none; border: 0; background: transparent; padding: 8px 12px; border-radius: 8px; color: #345; cursor: pointer; font-weight: 600;}
+.tab-btn:hover {background: #e6eaef;}
+.tab-btn.active {background: #234; color: #fff;}
+.tab-pane {animation: fadeIn 140ms ease-in;}
+@keyframes fadeIn {from {opacity: 0} to {opacity: 1}}
+
+/* Publication card polish */
+.publication {padding: 12px 12px; border-radius: 10px; transition: box-shadow .15s ease, transform .15s ease;}
+.publication:hover {box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-1px);}
+.publication-title {color: #123;}
+.publication .btn {display: inline-block; margin-top: 4px;}
+
+/* Buttons */
+a.btn {display: inline-block; border: 1px solid #ccd6e0; padding: 3px 8px; border-radius: 6px; background: #fff; transition: all .15s ease;}
+a.btn:hover {border-color: #234; color: #234; box-shadow: 0 2px 6px rgba(0,0,0,0.05)}
+
+/* Topic sections */
+.topic-section {margin: 18px 0 8px;}
+.topic-section h3 {margin: 18px 0 8px;}
+
+/* Research Interests grid */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+.interest-card {
+  background: #fff;
+  border: 1px solid #e6eaef;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+.interest-card h3 {margin-top: 4px; margin-bottom: 8px;}
+.interest-card ul {margin: 0; padding-left: 18px;}
+.interest-card li {margin: 6px 0;}
+
+@media only screen and (max-width: 900px) {
+  .interests-grid {grid-template-columns: 1fr;}
+}
+
+/* Industry Experience */
+.experience-list {margin-top: 12px;}
+.experience-item {display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #e6eaef; border-radius: 12px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.04); margin-bottom: 12px;}
+.experience-logo {width: 44px; height: 44px; object-fit: contain; border-radius: 8px; background: #fff;}
+.experience-meta {display: flex; flex-direction: column;}
+.experience-role {font-weight: 700; color: #123;}
+.experience-company {color: #345;}
+.experience-dates {color: #667; font-size: 0.95em;}
 
 @media only screen and (max-width: 1150px) {
     .header-profile-picture, .header-text {display: block; margin: auto; text-align: center;}
